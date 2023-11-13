@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int a,i;
+	a=1;
+	for(i=1;i<=10;i++){
+		a=(a+1)*2;
+	}
+	printf("%d",a);
+	return 0;
+}
+//猴子吃桃递归写法（pro加强版，不止算第十天)
+#include<stdio.h>
+int tao(int n);
+int tao(int n){
+	if(n!=1)
+	return ((1+tao(n-1))*2);
+	else
+		return 1;
+}
+int main()
+{
+	int n;
+	int sum=0;
+	scanf("%d",&n);
+	sum=tao(n+1);//因为在函数内部（n==1)时会return 1；导致少算一天，所以传参时应该传过去（n+1）
+	printf("%d",sum);
+	return 0;
+}
