@@ -2,8 +2,18 @@ int jiecheng(int n);
 int jiecheng(int n)
 {
 	int sum=1;
-		for(int i=n;i>0;i--){
-			sum*=i;
-		}
+	for(int i=n;i>0;i--){
+		sum*=i;
+}
 	return sum;
+}
+//递归版本
+int jiecheng(int n);
+int jiecheng(int n)
+{
+	if(n!=1){
+	return n*jiecheng(n-1);
+}
+	else
+	return 1;
 }
