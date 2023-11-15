@@ -1,0 +1,25 @@
+主函数省略，这个函数是实现分离出整数 n 从右边数第 k 个数字，如果有别的需求只需在循环体和递归主体里更改。
+//循环实现
+#include<stdio.h>
+int i=1;//定义的一个全局变量
+int digit(int n,int k);
+int digit(int n,int k){
+	int b=0;//也可以不用定义i，每次循环都k--
+	while(i!=k){//k--这里就应该是判断k是否等于0。
+		i++;
+	n=n/10;k--
+	}
+	b=n%10;
+	return b;
+}
+//递归算法的实现
+#include<stdio.h>
+int digit(int n,int k);
+int digit(int n,int k)
+{
+	k--;
+	if(k==0)
+		return n%10;
+	else
+		return digit(n/10,k);
+}
