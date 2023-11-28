@@ -1,3 +1,6 @@
+//c语言中的快速排序qsort函数
+//qsort(函数名，元素个数，元素大小，比较函数);
+以下是四个比较普遍的比较函数
 //整型快速排序
 int com_int(const void*p1,const void*p2)
 {
